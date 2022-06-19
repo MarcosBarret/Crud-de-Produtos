@@ -12,11 +12,6 @@ def home(request):
     else:
         data['db'] = Motos.objects.all()
 
-    # PAGINAÇÃO
-    #all = Motos.objects.all()
-    #paginator = Paginator(all, 2)
-    #pages = request.GET.get('page')
-    #data['db'] = paginator.get_page(pages)
     return render(request, 'index.html', data)
 
 def form(request):
